@@ -28,5 +28,7 @@ while [ $aantalgokken -le 3 ]; do
     ((aantalgokken+=1))
 done
 
-echo 'speitig u bent gefaald.'
+if [ $guess -ne $random ]; then
+    echo 'Too bad! Out of attempts.'
+fi
 
