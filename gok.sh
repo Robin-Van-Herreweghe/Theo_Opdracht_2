@@ -8,19 +8,19 @@ echo 'Probeer het getal te raden tussen 1-10'
 while [ $aantalgokken -le 3 ]; do 
     echo 'Gok numero #'$aantalgokken
     
-    read -p "Wat gok jij? [n]: " guess 
+    read -p "Wat gok jij? [n]: " gok 
 
-    while [[ ! $guess =~ (^[1-9]$|^10$)  ]]; do
-        read -p "Invalid input. Your guess? [n]: " guess
+    while [[ ! $gok =~ (^[1-9]$|^10$)  ]]; do
+        read -p "Oeps Geef en getal op tussen de 1-10? [n]: " gok
     done
 
-    if [ $guess -eq $random ]; then
+    if [ $gok -eq $random ]; then
         echo "Correct! Het Nummer was:" $random
         break;
     else
-        if [ $guess -lt $random ]; then 
+        if [ $gok -lt $random ]; then 
             echo 'Hoger';
-        elif [ $guess -gt $random ]; then
+        elif [ $gok -gt $random ]; then
             echo 'Lager';
         fi
     fi
