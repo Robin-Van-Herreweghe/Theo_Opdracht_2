@@ -29,6 +29,6 @@ while [ $aantalgokken -le 3 ]; do
 done
 
 if [ $guess -ne $random ]; then
-    echo 'Too bad! Out of attempts.'
+    echo 'Jammer u bent gefaald, volgende keer beter'
 fi
 
